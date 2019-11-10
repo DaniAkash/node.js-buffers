@@ -1,10 +1,10 @@
-const fs = require('fs');
+const fs = require("fs");
 
 /**
  * Reading the file
  */
 fs.readFile("/sandbox/myfile.txt", (err, data) => {
-  if(!err) {
+  if (!err) {
     console.log(data); // will print out the buffer
     console.log(data.toString()); // will print out the readable text
     // console.log(data.toJSON()); // will print out the buffer data as a json
@@ -17,13 +17,12 @@ fs.readFile("/sandbox/myfile.txt", (err, data) => {
  * Reading the file with the encoding
  */
 fs.readFile("/sandbox/myfile.txt", "utf-8", (err, data) => {
-  if(!err) {
+  if (!err) {
     console.log(data); // will print out the data with encoding which is readable text
   } else {
     console.error(err);
   }
 });
-
 
 /**
  * Using buffer bytelength
@@ -34,7 +33,7 @@ console.log(myString);
 console.log(myString.length);
 console.log(Buffer.byteLength(myString, "utf-8")); // byte length will be same
 
-const mySpecialString = "\u00bd + \u00bc = \u00be"
+const mySpecialString = "\u00bd + \u00bc = \u00be";
 
 console.log(mySpecialString);
 console.log(mySpecialString.length);
